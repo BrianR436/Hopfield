@@ -116,12 +116,12 @@ def imagen2vector():
 def matriz_pesos(patrones,M,N):
     FILAS=N
     matrizpesos = np.zeros([N,N])
-    i=0
+    i = 0
     peso = 0
     for i in range(FILAS):
         print("Cargando ", i," de 399")
         for x in range(N):  
-            if i==x:
+            if i == x:
                 matrizpesos[x][i]=0
             else:
                 for S in range(M):
@@ -294,7 +294,7 @@ def imprimir_imagen(imagen_asociada,imagen_prueba):
         plt.show()
 
 def main():
-    patrones,P,N= imagen2vector()
+    patrones,P,N = imagen2vector()
     pesos = matriz_pesos(patrones,P,N)
     desicion = 1
     while desicion == 1:
